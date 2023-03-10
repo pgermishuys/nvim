@@ -39,9 +39,14 @@ return require('packer').startup(function(use)
     use('lewis6991/gitsigns.nvim')
     use('nvim-lualine/lualine.nvim')
     use('lukas-reineke/indent-blankline.nvim')
-    use('kyazdani42/nvim-web-devicons')
-    use('kyazdani42/nvim-tree.lua')
     use('psliwka/vim-smoothie')
+    use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+        'nvim-tree/nvim-web-devicons', -- optional, for file icons
+      },
+      tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
 
     -- Diagnostics & Code Actions
     use({
